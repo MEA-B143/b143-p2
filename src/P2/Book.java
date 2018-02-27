@@ -9,8 +9,12 @@ public class Book {
 	Date return_date;
 	Date lending_date;
 	boolean borrowed;
+	boolean returned;
 	int lendedUserID;
+	int returnedUserID;
 	String lendedUserName;
+	String returnedUserName;
+	
 	
 	Book(String genre, String title, String author, String publisher) {
 		this.author = author;
@@ -24,5 +28,10 @@ public class Book {
 		lendedUserID = user.id;
 		lendedUserName = user.name;
 		lending_date = new Date();
+	}
+	public void return_book(User user) {
+		returnedUserID = user.id;
+		returnedUserName = user.name;
+		return_date = new Date();
 	}
 }
