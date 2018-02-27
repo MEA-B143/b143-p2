@@ -9,6 +9,7 @@ public class Start {
 		Book book2xd = new Book("Science fiction", "Lord of the space ting", "Damiano", "Aalborg University");
 		Book book3xd = new Book("Pure fire", "Da ting goes mans not hot", "Big Shaq", "Island Records");
 		Book book4xd = new Book("Romantic Comedy", "You can do small kids", "Hendrik", "Aalborg University");
+		User bigShaq = new User("Big Shaq", "Mansnothot");
 		
 	}
 
