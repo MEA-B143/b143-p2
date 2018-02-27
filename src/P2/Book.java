@@ -9,7 +9,6 @@ public class Book {
 	Date return_date;
 	Date lending_date;
 	boolean borrowed;
-	boolean returned;
 	int lendedUserID;
 	int returnedUserID;
 	String lendedUserName;
@@ -28,10 +27,12 @@ public class Book {
 		lendedUserID = user.id;
 		lendedUserName = user.name;
 		lending_date = new Date();
+		borrowed = true;
 	}
 	public void return_book(User user) {
 		returnedUserID = user.id;
 		returnedUserName = user.name;
 		return_date = new Date();
+		borrowed = false;
 	}
 }
