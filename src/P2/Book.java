@@ -35,4 +35,10 @@ public class Book {
 		return_date = new Date();
 		borrowed = false;
 	}
+	public String status() {
+		if (borrowed) {
+			String out = "The book is currently borrowed by " + lendedUserName + " since " + lending_date.toString();
+			return out;
+		}
+	}
 }
