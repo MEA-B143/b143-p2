@@ -11,6 +11,10 @@ public class Start {
 		Book book4xd = new Book("Romantic Comedy", "You can do small kids", "Hendrik", "Aalborg University");
 		User bigShaq = new User("Big Shaq", "Mansnothot");
 		
+		book1xd.borrow(bigShaq);
+		System.out.println(book1xd.status());
+		book1xd.return_book(bigShaq);
+		System.out.println(book1xd.status());
 	}
 
 }

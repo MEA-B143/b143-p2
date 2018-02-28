@@ -39,6 +39,8 @@ public class Book {
 		if (borrowed) {
 			String out = "The book is currently borrowed by " + lendedUserName + " since " + lending_date.toString();
 			return out;
+		} else {
+			return "The book is in the library";
 		}
 	}
 }
