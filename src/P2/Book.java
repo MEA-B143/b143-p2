@@ -37,10 +37,13 @@ public class Book {
 	}
 	public String status() {
 		if (borrowed) {
-			String out = "The book is currently borrowed by " + lendedUserName + " since " + lending_date.toString();
+			String out = "The book \"" + title + "\" is currently borrowed by " + lendedUserName + " since " + lending_date.toString();
 			return out;
 		} else {
-			return "The book is in the library";
+			return "The book \"" + title + "\" is in the library";
 		}
+	}
+	public boolean getBorrowed() {
+		return borrowed;
 	}
 }

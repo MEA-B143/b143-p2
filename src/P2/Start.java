@@ -4,17 +4,26 @@ public class Start {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hey Guys");
-		Book book1xd = new Book("Crime fiction", "Finding bigfoot", "Morten", "Aalborg University");
-		Book book2xd = new Book("Science fiction", "Lord of the space ting", "Damiano", "Aalborg University");
-		Book book3xd = new Book("Pure fire", "Da ting goes mans not hot", "Big Shaq", "Island Records");
-		Book book4xd = new Book("Romantic Comedy", "You can do small kids", "Hendrik", "Aalborg University");
+		Book[] library = new Book[4];
+		library[0] = new Book("Crime fiction", "Finding bigfoot", "Morten", "Aalborg University");
+		library[1] = new Book("Science fiction", "Lord of the space ting", "Damiano", "Aalborg University");
+		library[2] = new Book("Pure fire", "Da ting goes mans not hot", "Big Shaq", "Island Records");
+		library[3] = new Book("Romantic Comedy", "You can do small kids", "Hendrik", "Aalborg University");
 		User bigShaq = new User("Big Shaq", "Mansnothot");
-		
-		book1xd.borrow(bigShaq);
-		System.out.println(book1xd.status());
-		book1xd.return_book(bigShaq);
-		System.out.println(book1xd.status());
+
+		library[0].borrow(bigShaq);
+		System.out.println(library[0].status());
+		library[0].return_book(bigShaq);
+		System.out.println(library[0].status());
+
+		for (Book book : library) {
+			if (book.getBorrowed()) {
+				System.out.println("The book " + book.title + " by " + book.author + " is currently borrowed out.");
+			} else {
+				System.out.println("The book " + book.title + " by " + book.author + " is not currently borrowed out.");
+
+			}
+		}
 	}
 
 }
